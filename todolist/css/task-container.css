@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+*{
+    font-family: 'Sansita Swashed', cursive;
+}
+.task-container{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid springgreen ;
+    margin-bottom: 10px;
+}
+.task-container .aside-left{
+    width: 5%;
+}
+.task-container .aside-right{
+    width: 70%;
+}

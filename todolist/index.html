@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCEh-wWktf3E5J7KuZ7szcwRes9uyi-_8o",
+            authDomain: "ci50-199d8.firebaseapp.com",
+            databaseURL: "https://ci50-199d8.firebaseio.com",
+            projectId: "ci50-199d8",
+            storageBucket: "ci50-199d8.appspot.com",
+            messagingSenderId: "634133784815",
+            appId: "1:634133784815:web:d4be90c28952ac1958131a"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<body>
+    <!-- <task-list id="task-list-01" date-modified='2020/10/13'></task-list> -->
+    <div id="app"></div>
+</body>
+<template id="task-container-template">
+    <link rel="stylesheet" href="./css/task-container.css">
+    <div class="task-container">
+        <div class="aside-left">
+            <input type="checkbox" id="is-completed">
+        </div>
+        <div class="main-content">
+            <div id="content"></div>
+            <div id="date-modified"></div>
+        </div>
+        <div class="aside-right">
+            <button id="btn-edit">Edit</button>
+        </div>
+    </div>
+</template>
+<template id="task-list-template">
+
+    <div class="task-list">
+        <h2 id="name">Task</h2>
+        <form-add-task id="form-add-task"></form-add-task>
+        <div id="tasks"></div>
+        <div id="date-modified"></div>
+    </div>
+</template>
+<template id="form-add-task-template">
+    <form class="form-add-task">
+        <textarea name="content" cols="30" rows="10"></textarea>
+        <button>Create Task</button>
+    </form>
+</template>
+<script src="./js/app.js" type="module"> </script>
+
+</html>
